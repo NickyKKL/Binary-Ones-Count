@@ -2,19 +2,18 @@
 
 public class Counter
 {
-    public static void CountOnes(int number)
+    public static int CountOnes(int number)
     {
-        int a = number;
         int b;
         int count = 0;
 
-        while (a != 0)
+        while (number != 0)
         {
-            b = a % 2;
+            b = number % 2;
             count += b;
-            a = (a - b) / 2;
+            number = (number - b) / 2;
         }
 
-        Console.WriteLine($"{number} -> {count}");
+        return count;
     }
 }
